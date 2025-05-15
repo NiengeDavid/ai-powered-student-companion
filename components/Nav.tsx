@@ -35,7 +35,7 @@ export const Nav = () => {
         "px-4 py-2 flex items-center h-14 z-50 bg-card border-b border-border"
       }
     >
-      <div className>
+      <div className={"flex items-center gap-2"}>
         <Image
           src={schoolLogo}
           alt={"School Logo"}
@@ -43,7 +43,9 @@ export const Nav = () => {
           height={40}
           className={"rounded-full"}
         />
-        <span className="text-start pl-2 font-semibold text-xl">AI Student Companion</span>
+        <span className="text-start pl-2 font-semibold text-xl">
+          AI Student Companion
+        </span>
       </div>
       <div className={"ml-auto flex items-center gap-1"}>
         <Button
