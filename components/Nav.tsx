@@ -35,7 +35,7 @@ export const Nav = () => {
         "px-4 py-2 flex items-center h-14 z-50 bg-card border-b border-border"
       }
     >
-      <div>
+      <div className>
         <Image
           src={schoolLogo}
           alt={"School Logo"}
