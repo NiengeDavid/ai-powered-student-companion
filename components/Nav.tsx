@@ -5,7 +5,10 @@ import HumeLogo from "./logos/Hume";
 import { Button } from "./ui/button";
 import { Moon, Sun } from "lucide-react";
 import Github from "./logos/GitHub";
-import pkg from '@/package.json';
+import pkg from "@/package.json";
+import Image from "next/image";
+
+const schoolLogo = "/assets/school-logo.png";
 
 export const Nav = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -33,16 +36,19 @@ export const Nav = () => {
       }
     >
       <div>
-        <HumeLogo className={"h-5 w-auto"} />
+        <Image
+          src={schoolLogo}
+          alt={"School Logo"}
+          width={40}
+          height={40}
+          className={"rounded-full"}
+        />
+        <span className="text-start pl-2 font-semibold text-xl">AI Student Companion</span>
       </div>
       <div className={"ml-auto flex items-center gap-1"}>
         <Button
           onClick={() => {
-            window.open(
-              pkg.homepage,
-              "_blank",
-              "noopener noreferrer"
-            );
+            window.open(pkg.homepage, "_blank", "noopener noreferrer");
           }}
           variant={"ghost"}
           className={"ml-auto flex items-center gap-1.5"}
@@ -50,7 +56,7 @@ export const Nav = () => {
           <span>
             <Github className={"size-4"} />
           </span>
-          <span>Star on GitHub</span>
+          <span>View Source Code</span>
         </Button>
         <Button
           onClick={toggleDark}
